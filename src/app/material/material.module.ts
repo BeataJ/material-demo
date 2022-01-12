@@ -7,7 +7,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
 
-const MaterialComponents = [
+const material = [
   MatButtonModule,
   MatButtonToggleModule,
   MatIconModule,
@@ -18,7 +18,7 @@ const MaterialComponents = [
 
 @NgModule({
   declarations: [],
-  imports: [MaterialComponents],
-  exports: [MaterialComponents],
+  imports: [material],
+  exports: [material],
 })
 export class MaterialModule {}
