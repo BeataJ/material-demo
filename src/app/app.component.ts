@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'material-demo';
-  notifications = 2;
+  notifications = 0;
 }

@@ -61,7 +61,7 @@
 
 <!-- Badges -->
 <div>
-  <span matBadge="5" matBadgeSize="small">Notifivations</span>
+  <span [matBadge]="notifications" [matBadgeHidden]="notifications === 0" matBadgeSize="small">Notifivations</span>
 </div>
 <div>
   <span matBadge="5" matBadgePosition="below before" matBadgeSize="large" matBadgeColor="primary">Notifivations</span>
