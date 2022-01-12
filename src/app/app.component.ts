@@ -8,4 +8,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'material-demo';
   notifications = 0;
+  showSpinner = false;
+
+  loadSpinner() {
+    this.showSpinner = true;
+  }
 }
