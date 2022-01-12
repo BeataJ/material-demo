@@ -1,7 +1,15 @@
-button {
+/* button {
   margin-right: 3rem;
+} */
+
+/* div {
+  margin: 3rem;
+} */
+
+.navbar {
+  justify-content: space-between;
 }
 
-div {
-  margin: 3rem;
+span {
+  margin-right: 1rem;
 }
