@@ -95,7 +95,7 @@
 
 <!-- SideNav -->
 <mat-sidenav-container>
-  <mat-sidenav #sidenav mode="side" [(opened)]="opened">SideNav</mat-sidenav>
+  <mat-sidenav (opened)="log('Opened')" (closed)="log('Closed')" #sidenav mode="side" [(opened)]="opened">SideNav</mat-sidenav>
   <mat-sidenav-content>Main
     <button (click)="opened=!opened">Toggle Opened</button>
     <button (click)="sidenav.open()">Open</button>

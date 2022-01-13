@@ -17,4 +17,8 @@ export class AppComponent {
       this.showSpinner = false;
     }, 5000)
   }
+
+  log(state: any) {
+    console.log(state);
+  }
 }
