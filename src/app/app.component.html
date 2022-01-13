@@ -105,6 +105,11 @@
 </mat-sidenav-container> -->
 
 <!-- Menu -->
+<mat-menu #appMenu="matMenu">
+  <button mat-menu-item>FrontEnd</button>
+  <button mat-menu-item>BackEnd</button>
+</mat-menu>
 
+<button mat-flat-button [matMenuTriggerFor]="appMenu">Menu</button>
 
 
