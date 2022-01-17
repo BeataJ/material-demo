@@ -240,9 +240,22 @@
 </mat-card> -->
 
 <!-- Tabs -->
-<mat-tab-group #tabRef (selectedTabChange)="logChange(tabRef.selectedIndex)">
+<!-- <mat-tab-group #tabRef (selectedTabChange)="logChange(tabRef.selectedIndex)">
   <mat-tab label="Angular">Angular Conteny</mat-tab>
   <mat-tab label="React">React Content</mat-tab>
   <mat-tab label="Vue">Vue Content</mat-tab>
 </mat-tab-group>
-{{tabRef.selectedIndex}}
+{{tabRef.selectedIndex}} -->
+
+<!-- Steppers -->
+<mat-horizontal-stepper>
+  <mat-step label="Shipping Address">
+    <p>Shipping Address Details</p>
+  </mat-step>
+  <mat-step label="Billing Address">
+    <p>Billing Address Details</p>
+  </mat-step>
+  <mat-step label="Place Order">
+    <p>Order Details</p>
+  </mat-step>
+</mat-horizontal-stepper>
