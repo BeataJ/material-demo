@@ -240,7 +240,7 @@
 </mat-card> -->
 
 <!-- Tabs -->
-<mat-tab-group #tabRef>
+<mat-tab-group #tabRef (selectedTabChange)="logChange(tabRef.selectedIndex)">
   <mat-tab label="Angular">Angular Conteny</mat-tab>
   <mat-tab label="React">React Content</mat-tab>
   <mat-tab label="Vue">Vue Content</mat-tab>
