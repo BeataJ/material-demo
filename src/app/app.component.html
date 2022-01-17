@@ -248,16 +248,16 @@
 {{tabRef.selectedIndex}} -->
 
 <!-- Steppers -->
-<mat-horizontal-stepper>
-  <mat-step label="Shipping Address">
+<mat-horizontal-stepper linear>
+  <mat-step label="Shipping Address" completed="false">
     <p>Shipping Address Details</p>
   </mat-step>
-  <mat-step label="Billing Address">
+  <mat-step label="Billing Address" completed="false">
     <p>Billing Address Details</p>
     <button mat-button matStepperPrevious>Back</button>
     <button mat-button matStepperNext>Next</button>
   </mat-step>
-  <mat-step label="Place Order">
+  <mat-step label="Place Order" completed="false">
     <p>Order Details</p>
   </mat-step>
 </mat-horizontal-stepper>
