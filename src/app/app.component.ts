@@ -10,7 +10,8 @@ export class AppComponent {
   // notifications = 0;
   // showSpinner = false;
   // opened = false;
-  slectedValue: string | undefined;
+  // slectedValue: string | undefined;
+  options: string[] = ['Angular', 'React', 'Vue']
 
   // loadData() {
   //   this.showSpinner = true;
@@ -23,7 +24,7 @@ export class AppComponent {
   //   console.log(state);
   // }
 
-  logChange(index: any){
-    console.log(index)
-  }
+  // logChange(index: any){
+  //   console.log(index)
+  // }
 }
