@@ -302,12 +302,16 @@
 </mat-form-field> -->
 
 <!-- Select Component -->
+<br>
+<br>
 <mat-form-field>
-  <mat-select>
-    <mat-label>Topic</mat-label>
+  <mat-label>Topic</mat-label>
+  <mat-select [(value)]= 'slectedValue'>
     <mat-option value="angular">Angular</mat-option>
     <mat-option value="react">React</mat-option>
     <mat-option value="vue">Vue</mat-option>
   </mat-select>
 </mat-form-field>
+
+{{slectedValue}}
 
