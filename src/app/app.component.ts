@@ -11,7 +11,13 @@ export class AppComponent {
   // showSpinner = false;
   // opened = false;
   // slectedValue: string | undefined;
-  options: string[] = ['Angular', 'React', 'Vue']
+  options: string[] = ['Angular', 'React', 'Vue'];
+  objectOptions = [
+    {name: 'Angular'},
+    { name: 'React'},
+    { name: 'Angular Material'},
+    { name: 'Vue'},
+  ]
 
   // loadData() {
   //   this.showSpinner = true;
