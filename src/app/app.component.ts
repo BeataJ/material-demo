@@ -33,4 +33,8 @@ export class AppComponent {
   // logChange(index: any){
   //   console.log(index)
   // }
+
+  displayFn(subject: any) {
+    return subject ? subject.name : undefined;
+  }
 }
