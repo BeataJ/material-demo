@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
   // title = 'material-demo';
@@ -13,11 +14,12 @@ export class AppComponent {
   // slectedValue: string | undefined;
   options: string[] = ['Angular', 'React', 'Vue'];
   objectOptions = [
-    {name: 'Angular'},
-    { name: 'React'},
-    { name: 'Angular Material'},
-    { name: 'Vue'},
-  ]
+    { name: 'Angular' },
+    { name: 'React' },
+    { name: 'Angular Material' },
+    { name: 'Vue' },
+  ];
+  myControl = new FormControl();
 
   // loadData() {
   //   this.showSpinner = true;

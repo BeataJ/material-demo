@@ -325,7 +325,7 @@
 <!-- Autocomplite -->
 <form>
   <mat-form-field>
-    <input type="text" matInput [matAutocomplete]="auto">
+    <input type="text" matInput [matAutocomplete]="auto" [formControl]="myControl">
     <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
       <mat-option *ngFor="let option of objectOptions" [value]="option">
         {{option.name}}
