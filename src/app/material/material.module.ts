@@ -18,6 +18,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 const material = [
   MatButtonModule,
@@ -39,6 +40,7 @@ const material = [
   MatInputModule,
   MatSelectModule,
   MatAutocompleteModule,
+  MatCheckboxModule,
 ];
 
 @NgModule({
