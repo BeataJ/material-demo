@@ -344,8 +344,10 @@
 </mat-checkbox> -->
 
 <!-- Radio buttons -->
-<mat-radio-group>
-  <mat-radio-button value="angular">Angular</mat-radio-button>
+<mat-radio-group [(ngModel)]="radioValue">
+  <mat-radio-button value="angular" color="primary">Angular</mat-radio-button>
   <mat-radio-button value="react">React</mat-radio-button>
-  <mat-radio-button value="vue">Vue</mat-radio-button>
+  <mat-radio-button value="vue" color="warn">Vue</mat-radio-button>
 </mat-radio-group>
+<br>
+{{radioValue}}

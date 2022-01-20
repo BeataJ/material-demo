@@ -14,15 +14,17 @@ export class AppComponent implements OnInit{
   // showSpinner = false;
   // opened = false;
   // slectedValue: string | undefined;
-  options: string[] = ['Angular', 'React', 'Vue'];
-  objectOptions = [
-    { name: 'Angular' },
-    { name: 'React' },
-    { name: 'Angular Material' },
-    { name: 'Vue' },
-  ];
-  myControl = new FormControl();
-  filteredOptions: Observable<string[]> | undefined;
+  // options: string[] = ['Angular', 'React', 'Vue'];
+  // objectOptions = [
+  //   { name: 'Angular' },
+  //   { name: 'React' },
+  //   { name: 'Angular Material' },
+  //   { name: 'Vue' },
+  // ];
+  // myControl = new FormControl();
+  // filteredOptions: Observable<string[]> | undefined;
+  radioValue: string | undefined;
+
 
   // loadData() {
   //   this.showSpinner = true;
@@ -53,20 +55,20 @@ export class AppComponent implements OnInit{
   // }
 
   ngOnInit(): void {
-      this.filteredOptions = this.myControl.valueChanges.pipe(
-        startWith(''),
-        map(value => this._filter(value)),
-      )
+      // this.filteredOptions = this.myControl.valueChanges.pipe(
+      //   startWith(''),
+      //   map(value => this._filter(value)),
+      // )
   }
 
-  private _filter(value: string): string[] {
-    const filterValue = value.toLowerCase();
-    return this.options.filter(option => {
-      option.toLowerCase().includes(filterValue)
-    })
-  }
+  // private _filter(value: string): string[] {
+  //   const filterValue = value.toLowerCase();
+  //   return this.options.filter(option => {
+  //     option.toLowerCase().includes(filterValue)
+  //   })
+  // }
 
-  displayFn(subject: any) {
-    return subject ? subject.name : undefined;
-  }
+  // displayFn(subject: any) {
+  //   return subject ? subject.name : undefined;
+  // }
 }
