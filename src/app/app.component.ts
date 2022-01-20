@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
 import {map, startWith } from 'rxjs/operators'
@@ -8,7 +8,7 @@ import {map, startWith } from 'rxjs/operators'
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   // title = 'material-demo';
   // notifications = 0;
   // showSpinner = false;
@@ -51,6 +51,20 @@ export class AppComponent {
   // logChange(index: any){
   //   console.log(index)
   // }
+
+  ngOnInit(): void {
+      this.filteredOptions = this.myControl.valueChanges.pipe(
+        startWith(''),
+        map(value => this._filter(value)),
+      )
+  }
+
+  private _filter(value: string): string[] {
+    const filterValue = value.toLowerCase();
+    return this.options.filter(option => {
+      option.toLowerCase().includes(filterValue)
+    })
+  }
 
   displayFn(subject: any) {
     return subject ? subject.name : undefined;
