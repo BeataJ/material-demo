@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { Observable } from 'rxjs';
+import {map, startWith } from 'rxjs/operators'
 
 @Component({
   selector: 'app-root',
@@ -20,6 +22,20 @@ export class AppComponent {
     { name: 'Vue' },
   ];
   myControl = new FormControl();
+  filteredOptions: Observable<string[]> | undefined;
+
+  // loadData() {
+  //   this.showSpinner = true;
+  //   setTimeout(()=> {
+  //     this.showSpinner = false;
+  //   }, 5000)
+  // }
+  // log(state: any) {
+  //   console.log(state);
+  // }
+  // logChange(index: any){
+  //   console.log(index)
+  // }
 
   // loadData() {
   //   this.showSpinner = true;
