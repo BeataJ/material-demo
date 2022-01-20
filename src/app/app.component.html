@@ -344,10 +344,19 @@
 </mat-checkbox> -->
 
 <!-- Radio buttons -->
-<mat-radio-group [(ngModel)]="radioValue">
+<!-- <mat-radio-group [(ngModel)]="radioValue">
   <mat-radio-button value="angular" color="primary">Angular</mat-radio-button>
   <mat-radio-button value="react">React</mat-radio-button>
   <mat-radio-button value="vue" color="warn">Vue</mat-radio-button>
 </mat-radio-group>
 <br>
-{{radioValue}}
+{{radioValue}} -->
+
+<!-- Datapicker -->
+<mat-form-field>
+  <input matInput [matDatepicker]="myDatePicker">
+  <mat-datepicker-toggle matSuffix [for]="myDatePicker"></mat-datepicker-toggle>
+  <mat-datepicker #myDatePicker></mat-datepicker>
+</mat-form-field>
+
+
