@@ -23,7 +23,14 @@ export class AppComponent implements OnInit{
   // ];
   // myControl = new FormControl();
   // filteredOptions: Observable<string[]> | undefined;
-  radioValue: string | undefined;
+  // radioValue: string | undefined;
+  minDate = new Date();
+  maxDate = new Date(2022,1,22);
+
+  dateFilter = (date:any) => {
+    const day = date.getDay();
+    return day !== 0 && day !== 6;
+  }
 
 
   // loadData() {
