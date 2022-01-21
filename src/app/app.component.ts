@@ -93,3 +93,9 @@ export class AppComponent implements OnInit{
   //   return subject ? subject.name : undefined;
   // }
 }
+
+@Component({
+  selector: 'custom-snackbar',
+  template: `<span style="color: orange">Custom SnackBar</span>`
+})
+export class CustomSnackBarComponent{}
