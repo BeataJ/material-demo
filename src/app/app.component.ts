@@ -98,4 +98,6 @@ export class AppComponent implements OnInit{
   selector: 'custom-snackbar',
   template: `<span style="color: orange">Custom SnackBar</span>`
 })
-export class CustomSnackBarComponent{}
+export class CustomSnackBarComponent{
+
+}
