@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Observable, map } from 'rxjs';
-import { startWith } from 'rxjs/operators'
+import { startWith } from 'rxjs/operators';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-root',
@@ -32,6 +33,11 @@ export class AppComponent implements OnInit{
     return day !== 0 && day !== 6;
   }
 
+  constructor(private snackBar: MatSnackBar) {}
+
+  openSnackBar(message: any) {
+    this.snackBar.open(message)
+  }
 
   // loadData() {
   //   this.showSpinner = true;
