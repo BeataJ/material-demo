@@ -36,7 +36,15 @@ export class AppComponent implements OnInit{
   constructor(private snackBar: MatSnackBar) {}
 
   openSnackBar(message: any, action: any) {
-    this.snackBar.open(message, action)
+    let snackBarRef = this.snackBar.open(message, action);
+
+    snackBarRef.afterDismissed().subscribe(() => {
+      console.log('The snackbar was dismissed')
+    });
+
+    snackBarRef.onAction().subscribe(() => {
+      console.log('The snackbar action was triggered!');
+    })
   }
 
   // loadData() {
