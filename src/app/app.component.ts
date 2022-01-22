@@ -4,6 +4,8 @@ import { Observable, map } from 'rxjs';
 import { startWith } from 'rxjs/operators';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatDialog } from '@angular/material/dialog';
+import { DialogExampleComponent } from './dialog-example/dialog-example.component';
+
 
 @Component({
   selector: 'app-root',
@@ -37,7 +39,7 @@ export class AppComponent implements OnInit {
   constructor(private snackBar: MatSnackBar, public dialog: MatDialog) {}
 
   openDialog() {
-    this.dialog.open();
+    this.dialog.open(DialogExampleComponent);
   }
 
   // openSnackBar(message: any, action: any) {
