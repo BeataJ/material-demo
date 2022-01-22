@@ -5,6 +5,7 @@ import { startWith } from 'rxjs/operators';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogExampleComponent } from './dialog-example/dialog-example.component';
+import { ConditionalExpr } from '@angular/compiler';
 
 
 @Component({
@@ -39,7 +40,11 @@ export class AppComponent implements OnInit {
   constructor(private snackBar: MatSnackBar, public dialog: MatDialog) {}
 
   openDialog() {
-    this.dialog.open(DialogExampleComponent);
+    let dialogRef = this.dialog.open(DialogExampleComponent);
+
+    dialogRef.afterClosed().subscribe((result) => {
+      console.log(`Dialog result: ${result}`)
+    });
   }
 
   // openSnackBar(message: any, action: any) {
