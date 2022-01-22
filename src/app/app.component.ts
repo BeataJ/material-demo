@@ -3,6 +3,7 @@ import { FormControl } from '@angular/forms';
 import { Observable, map } from 'rxjs';
 import { startWith } from 'rxjs/operators';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-root',
@@ -25,31 +26,35 @@ export class AppComponent implements OnInit {
   // myControl = new FormControl();
   // filteredOptions: Observable<string[]> | undefined;
   // radioValue: string | undefined;
-  minDate = new Date();
-  maxDate = new Date(2022, 1, 22);
+  // minDate = new Date();
+  // maxDate = new Date(2022, 1, 22);
 
-  dateFilter = (date: any) => {
-    const day = date.getDay();
-    return day !== 0 && day !== 6;
-  };
+  // dateFilter = (date: any) => {
+  //   const day = date.getDay();
+  //   return day !== 0 && day !== 6;
+  // };
 
-  constructor(private snackBar: MatSnackBar) {}
+  constructor(private snackBar: MatSnackBar, public dialog: MatDialog) {}
 
-  openSnackBar(message: any, action: any) {
-    let snackBarRef = this.snackBar.open(message, action, { duration: 2000 });
-
-    snackBarRef.afterDismissed().subscribe(() => {
-      console.log('The snackbar was dismissed');
-    });
-
-    snackBarRef.onAction().subscribe(() => {
-      console.log('The snackbar action was triggered!');
-    });
+  openDialog() {
+    this.dialog.open();
   }
 
-  openCustomSnackBar() {
-    this.snackBar.openFromComponent(CustomSnackBarComponent, { duration:2000 });
-  }
+  // openSnackBar(message: any, action: any) {
+  //   let snackBarRef = this.snackBar.open(message, action, { duration: 2000 });
+
+  //   snackBarRef.afterDismissed().subscribe(() => {
+  //     console.log('The snackbar was dismissed');
+  //   });
+
+  //   snackBarRef.onAction().subscribe(() => {
+  //     console.log('The snackbar action was triggered!');
+  //   });
+  // }
+
+  // openCustomSnackBar() {
+  //   this.snackBar.openFromComponent(CustomSnackBarComponent, { duration:2000 });
+  // }
 
   // loadData() {
   //   this.showSpinner = true;
