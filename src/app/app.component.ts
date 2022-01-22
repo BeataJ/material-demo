@@ -40,7 +40,7 @@ export class AppComponent implements OnInit {
   constructor(private snackBar: MatSnackBar, public dialog: MatDialog) {}
 
   openDialog() {
-    let dialogRef = this.dialog.open(DialogExampleComponent);
+    let dialogRef = this.dialog.open(DialogExampleComponent, {data: {name:'Bob'}});
 
     dialogRef.afterClosed().subscribe((result) => {
       console.log(`Dialog result: ${result}`)
