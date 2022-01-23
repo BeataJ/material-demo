@@ -57,7 +57,8 @@ export class AppComponent implements OnInit {
   //   return day !== 0 && day !== 6;
   // };
 
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
+  displayedColumns: string[] = ['position', 'name', 'symbol', 'weight'];
+  displayedColumnsData: string[] = ['position', 'name', 'symbol'];
   dataSource = ELEMENT_DATA;
 
   constructor(private snackBar: MatSnackBar, public dialog: MatDialog) {}
