@@ -63,6 +63,10 @@ export class AppComponent implements OnInit {
 
   constructor(private snackBar: MatSnackBar, public dialog: MatDialog) {}
 
+  logData(row: any) {
+    console.log(row)
+  };
+
   // openDialog() {
   //   let dialogRef = this.dialog.open(DialogExampleComponent, {data: {name:'Bob'}});
 

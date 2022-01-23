@@ -406,7 +406,7 @@
   </ng-container>
 
   <mat-header-row *matHeaderRowDef="displayedColumnsData"></mat-header-row>
-  <mat-row *matRowDef="let row; columns: displayedColumnsData;"></mat-row>
+  <mat-row (click)="logData(row)" *matRowDef="let row; columns: displayedColumnsData;"></mat-row>
 </mat-table>
 
 
