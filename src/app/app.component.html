@@ -380,6 +380,10 @@
 <!-- <button mat-raised-button (click)="openDialog()">Open Dialog</button> -->
 
 <!-- Table -->
+<mat-form-field>
+  <input (keyup)="applyFilter($event)" matInput placeholder="filter">
+</mat-form-field>
+
 <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
   <!-- Position Column -->
   <ng-container matColumnDef="position">

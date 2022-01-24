@@ -61,13 +61,13 @@ export class AppComponent implements OnInit {
   displayedColumns: string[] = ['position', 'name', 'symbol', 'weight'];
   displayedColumnsData: string[] = ['position', 'name', 'symbol'];
   // dataSource = ELEMENT_DATA;
-  dataSource = new MatTableDataSource(ELEMENT_DATA)
+  dataSource = new MatTableDataSource(ELEMENT_DATA);
 
   constructor(private snackBar: MatSnackBar, public dialog: MatDialog) {}
 
   logData(row: any) {
-    console.log(row)
-  };
+    console.log(row);
+  }
 
   // openDialog() {
   //   let dialogRef = this.dialog.open(DialogExampleComponent, {data: {name:'Bob'}});
@@ -138,6 +138,11 @@ export class AppComponent implements OnInit {
   // displayFn(subject: any) {
   //   return subject ? subject.name : undefined;
   // }
+
+  applyFilter(event: Event){
+    const filterValue = (event.target as HTMLInputElement).value
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+  }
 }
 
 @Component({
