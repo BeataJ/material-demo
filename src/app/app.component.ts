@@ -9,11 +9,7 @@ import { DialogExampleComponent } from './dialog-example/dialog-example.componen
 import { ConditionalExpr } from '@angular/compiler';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatSort, Sort } from '@angular/material/sort';
-import {
-  MatPaginator,
-  MatPaginatorIntl,
-  MatPaginatorModule,
-} from '@angular/material/paginator';
+import { MatPaginator } from '@angular/material/paginator';
 
 
 export interface PeriodicElement {
