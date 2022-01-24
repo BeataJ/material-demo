@@ -384,7 +384,8 @@
   <input (keyup)="applyFilter($event)" matInput placeholder="filter">
 </mat-form-field>
 
-<mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort>
+<mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort
+ (matSortChange)="announceSortChange($event)">
   <!-- Position Column -->
   <ng-container matColumnDef="position">
     <mat-header-cell *matHeaderCellDef mat-sort-header> No. </mat-header-cell>
