@@ -413,5 +413,5 @@
   <mat-header-row *matHeaderRowDef="displayedColumnsData"></mat-header-row>
   <mat-row (click)="logData(row)" *matRowDef="let row; columns: displayedColumnsData;"></mat-row>
 </mat-table>
-
+<mat-paginator [pageSizeOptions]="[5,10,20]" showFirstLastButtons></mat-paginator>
 
