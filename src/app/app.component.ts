@@ -6,6 +6,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogExampleComponent } from './dialog-example/dialog-example.component';
 import { ConditionalExpr } from '@angular/compiler';
+import { MatTableDataSource } from '@angular/material/table';
 
 export interface PeriodicElement {
   name: string;
@@ -59,7 +60,8 @@ export class AppComponent implements OnInit {
 
   displayedColumns: string[] = ['position', 'name', 'symbol', 'weight'];
   displayedColumnsData: string[] = ['position', 'name', 'symbol'];
-  dataSource = ELEMENT_DATA;
+  // dataSource = ELEMENT_DATA;
+  dataSource = new MatTableDataSource(ELEMENT_DATA)
 
   constructor(private snackBar: MatSnackBar, public dialog: MatDialog) {}
 
