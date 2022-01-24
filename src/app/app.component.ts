@@ -62,6 +62,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   //   return day !== 0 && day !== 6;
   // };
 
+
   displayedColumns: string[] = ['position', 'name', 'symbol', 'weight'];
   displayedColumnsData: string[] = ['position', 'name', 'symbol'];
   // dataSource = ELEMENT_DATA;
@@ -80,8 +81,11 @@ export class AppComponent implements OnInit, AfterViewInit {
   constructor(
     private snackBar: MatSnackBar,
     public dialog: MatDialog,
-    private _liveAnnouncer: LiveAnnouncer
-  ) {}
+    private _liveAnnouncer: LiveAnnouncer,
+
+  ) {
+
+  }
 
   logData(row: any) {
     console.log(row);
