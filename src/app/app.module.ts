@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from './material/material.module';
 import { DialogExampleComponent } from './dialog-example/dialog-example.component';
+import { ScrollingModule } from '@angular/cdk/scrolling';
 
 
 
@@ -20,6 +21,7 @@ import { DialogExampleComponent } from './dialog-example/dialog-example.componen
     FormsModule,
     ReactiveFormsModule,
     MaterialModule,
+    ScrollingModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
