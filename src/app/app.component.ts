@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, Injectable, OnInit, ViewChild } from '@angular/core';
 import { LiveAnnouncer } from '@angular/cdk/a11y';
 import { FormControl } from '@angular/forms';
 import { Observable, map } from 'rxjs';
@@ -9,7 +9,11 @@ import { DialogExampleComponent } from './dialog-example/dialog-example.componen
 import { ConditionalExpr } from '@angular/compiler';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatSort, Sort } from '@angular/material/sort';
-import { MatPaginator } from '@angular/material/paginator';
+import {
+  MatPaginator,
+  MatPaginatorIntl,
+  MatPaginatorModule,
+} from '@angular/material/paginator';
 
 
 export interface PeriodicElement {
@@ -73,6 +77,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   paginator!: MatPaginator;
 
   ngAfterViewInit() {
+    this.dataSource.sort = this.sort;
     this.dataSource.sort = this.sort;
   }
 
@@ -183,3 +188,4 @@ export class AppComponent implements OnInit, AfterViewInit {
   template: `<span style="color: orange">Custom SnackBar</span>`,
 })
 export class CustomSnackBarComponent {}
+
