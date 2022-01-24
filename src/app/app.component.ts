@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Observable, map } from 'rxjs';
 import { startWith } from 'rxjs/operators';
@@ -7,6 +7,8 @@ import { MatDialog } from '@angular/material/dialog';
 import { DialogExampleComponent } from './dialog-example/dialog-example.component';
 import { ConditionalExpr } from '@angular/compiler';
 import { MatTableDataSource } from '@angular/material/table';
+import { MatSort } from '@angular/material/sort';
+
 
 export interface PeriodicElement {
   name: string;
@@ -62,6 +64,9 @@ export class AppComponent implements OnInit {
   displayedColumnsData: string[] = ['position', 'name', 'symbol'];
   // dataSource = ELEMENT_DATA;
   dataSource = new MatTableDataSource(ELEMENT_DATA);
+
+  @ViewChild(MatSort)
+  sort!: MatSort;
 
   constructor(private snackBar: MatSnackBar, public dialog: MatDialog) {}
 
@@ -122,6 +127,7 @@ export class AppComponent implements OnInit {
   // }
 
   ngOnInit(): void {
+    this.dataSource.sort = this.sort;
     // this.filteredOptions = this.myControl.valueChanges.pipe(
     //   startWith(''),
     //   map(value => this._filter(value)),
