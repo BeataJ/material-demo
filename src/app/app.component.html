@@ -385,7 +385,7 @@
 </mat-form-field>
 
 <mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort
- (matSortChange)="announceSortChange($event)">
+ >
   <!-- Position Column -->
   <ng-container matColumnDef="position">
     <mat-header-cell *matHeaderCellDef mat-sort-header> No. </mat-header-cell>
@@ -413,5 +413,5 @@
   <mat-header-row *matHeaderRowDef="displayedColumnsData"></mat-header-row>
   <mat-row (click)="logData(row)" *matRowDef="let row; columns: displayedColumnsData;"></mat-row>
 </mat-table>
-<mat-paginator [pageSizeOptions]="[5,10,20]" showFirstLastButtons></mat-paginator>
+<mat-paginator [pageSizeOptions]="[5,10,20]" [length]="20" [pageSize]="5"></mat-paginator>
 
